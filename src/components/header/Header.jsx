@@ -21,7 +21,7 @@ const Header = ({ coin }) => {
         >
             <img src={logo} alt="Logo" />
             <div className='flex items-center'>
-                <ul className='flex gap-4'>
+                <ul className=' hidden lg:flex gap-4 '>
                     <li>Home</li>
                     <li>Fixture</li>
                     <li>Teams</li>

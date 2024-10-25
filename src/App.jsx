@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Selected from './components/selected/Selected';
 import Player from './components/player/Player';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
       <Players handleChoose={handleChoose} handleSelected={handleSelected}></Players>
       <Selected selectedPlayers={selectedPlayers} handleDelete={handleDelete}></Selected>
       <ToastContainer position="top-center" autoClose={2000} theme="colored" />
+      <Footer></Footer>
     </>
   )
 }
