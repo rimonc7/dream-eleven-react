@@ -2,7 +2,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 
 
-const Player = ({ player }) => {
+const Player = ({ player, handleChoose, handleSelected }) => {
     const { name, country, image, role, battingType, bowlingType, biddingPrice } = player
     return (
         <div className="border-2 rounded-xl m-4">
@@ -33,7 +33,10 @@ const Player = ({ player }) => {
                             </div>
                             <div className=" flex justify-between mt-4 align-middle">
                                 <p className="font-semibold">Price: {biddingPrice}$</p>
-                                <button className="border-2 p-2 rounded-lg">Choose Player</button>
+                                <button onClick={() => {
+                                    handleChoose(biddingPrice); 
+                                    handleSelected(player);
+                                }} className="border-2 p-2 rounded-lg ">Choose Player</button>
                             </div>
                         </div>
                     </div>

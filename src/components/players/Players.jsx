@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
 
-const Players = () => {
+const Players = ({ handleChoose, handleSelected }) => {
     const [players, SetPlayers] = useState([])
 
     useEffect(() => {
@@ -18,15 +18,15 @@ const Players = () => {
                 <div className="flex justify-between my-10">
                     <h3 className="font-bold text-2xl">Available Players:{players.length}</h3>
                     <div>
-                    <button className="bg-yellow-400 font-bold p-2 rounded-lg">Available</button>
-                    <button className="p-2 rounded-lg">Selected</button>
+                        <button className="bg-yellow-400 font-bold p-2 rounded-lg">Available</button>
+                        <button className="p-2 rounded-lg">Selected</button>
                     </div>
 
                 </div>
-                <div className="grid grid-cols-3"> 
-                {
-                    players.map(player => <Player key={player.playerId} player={player}></Player>)
-                }
+                <div className="grid grid-cols-3">
+                    {
+                        players.map(player => <Player key={player.playerId} player={player} handleChoose={handleChoose} handleSelected={handleSelected}></Player>)
+                    }
                 </div>
             </div>
         </>
