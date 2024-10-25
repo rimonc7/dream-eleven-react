@@ -3,7 +3,7 @@ import './footer.css'
 const Footer = () => {
     return (
         <div className="relative mt-52">
-            <div className="bg-black bg-opacity-25 border-2 border-white p-1 rounded-xl mx-32 absolute inset-x-0 -top-60 mt-20">
+            <div className="bg-white bg-opacity-25 border-2 border-gray-400 p-1 rounded-xl mx-4 lg:mx-32 absolute inset-x-0 -top-60 mt-20">
                 <div className="m-4 bg-white py-20 rounded-xl text-center">
                     <h3 className="font-bold text-3xl">Subscribe to our Newsletter</h3>
                     <p className="text-gray-400 my-3"><small>Get the latest updates and news right in your inbox!</small></p>
@@ -13,14 +13,14 @@ const Footer = () => {
             </div>
             <div className="bg-[#04081D] pt-60">
                 <img className="mx-auto mb-16" src={footerLogo} alt="" />
-                <div className="flex justify-between text-white mx-36">
+                <div className="lg:flex justify-between text-white mx-5 lg:mx-36">
                     <div>
                         <h3 className="font-semibold text-xl mb-3">About Us</h3>
-                        <p className="w-1/3"><small>We are a passionate team dedicated to providing the best services to our customers.</small></p>
+                        <p className="lg:w-1/3"><small>We are a passionate team dedicated to providing the best services to our customers.</small></p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-xl mb-3">Quick Links</h3>
-                        <ul className="text-center">
+                        <ul className=" lg:text-center">
                             <li> <small>Home</small></li>
                             <li> <small>Service</small></li>
                             <li><small>Contact</small></li>

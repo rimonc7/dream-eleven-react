@@ -5,7 +5,7 @@ import { FaFlag } from "react-icons/fa";
 const Player = ({ player, handleChoose, handleSelected }) => {
     const { name, country, image, role, battingType, bowlingType, biddingPrice } = player
     return (
-        <div className="border-2 rounded-xl m-4">
+        <div className="border-2 rounded-xl my-3 lg:m-4">
             <div className="mx-4">
                 <img className=" p-3 w-full h-48 object-cover rounded-3xl" src={image} alt="" />
                 <div>

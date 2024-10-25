@@ -14,7 +14,7 @@ const Players = ({ handleChoose, handleSelected }) => {
 
     return (
         <>
-            <div className="mx-36">
+            <div className=" mx-4 lg:mx-36">
                 <div className="flex justify-between my-10">
                     <h3 className="font-bold text-2xl">Available Players:{players.length}</h3>
                     <div>
@@ -23,7 +23,7 @@ const Players = ({ handleChoose, handleSelected }) => {
                     </div>
 
                 </div>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3">
                     {
                         players.map(player => <Player key={player.playerId} player={player} handleChoose={handleChoose} handleSelected={handleSelected}></Player>)
                     }

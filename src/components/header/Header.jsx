@@ -15,7 +15,7 @@ const Header = ({ coin }) => {
 
     return (
         <div
-            className={`flex justify-between my-6 mx-36 sticky top-0 z-50 transition-all duration-300 ${
+            className={`flex justify-between my-6 mx-4 lg:mx-36 sticky top-0 z-50 transition-all duration-300 ${
                 isScrolled ? 'backdrop-blur-md bg-white bg-opacity-90' : 'backdrop-blur-3xl bg-transparent'
             }`}
         >
