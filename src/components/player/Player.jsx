@@ -34,7 +34,7 @@ const Player = ({ player, handleChoose, handleSelected }) => {
                             <div className=" flex justify-between mt-4 align-middle">
                                 <p className="font-semibold">Price: {biddingPrice}$</p>
                                 <button onClick={() => {
-                                    handleChoose(biddingPrice); 
+                                    handleChoose(biddingPrice);
                                     handleSelected(player);
                                 }} className="border-2 p-2 rounded-lg ">Choose Player</button>
                             </div>
