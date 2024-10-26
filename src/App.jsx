@@ -58,9 +58,6 @@ function App() {
     setIsActive(value)
   }
 
-
-
-
   return (
     <>
       <Header coin={coin}></Header>
