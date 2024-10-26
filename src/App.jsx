@@ -6,7 +6,6 @@ import Players from './components/players/Players'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Selected from './components/selected/Selected';
-import Player from './components/player/Player';
 import Footer from './components/footer/Footer';
 import Button from './components/button/Button';
 
@@ -55,18 +54,18 @@ function App() {
     setIsActive(value)
   }
 
-
-  // const [addMore, setAddMore] = useState([])
-
   const handleAddMore = value => {
     setIsActive(value)
   }
+
+
+
 
   return (
     <>
       <Header coin={coin}></Header>
       <Hero handleCoin={handleCoin} ></Hero>
-      <Button handleConditionButton={handleConditionButton} isActive={isActive}></Button>
+      <Button handleConditionButton={handleConditionButton} isActive={isActive} selectedPlayers={selectedPlayers} ></Button>
       <div className={isActive == false ? "hidden" : "flex"}>
         <Players handleChoose={handleChoose} handleSelected={handleSelected}></Players>
       </div>

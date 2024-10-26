@@ -1,4 +1,5 @@
 import SelectedPlayer from "./SelectedPlayer";
+import PropTypes from 'prop-types';
 
 const Selected = ({ selectedPlayers, handleDelete ,handleAddMore }) => {
     return (
@@ -15,4 +16,11 @@ const Selected = ({ selectedPlayers, handleDelete ,handleAddMore }) => {
     );
 };
 
+
 export default Selected;
+
+Selected.propTypes = {
+    selectedPlayers:PropTypes.array.isRequired,
+    handleDelete:PropTypes.func.isRequired,
+    handleAddMore:PropTypes.func.isRequired
+}

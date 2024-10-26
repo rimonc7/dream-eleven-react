@@ -1,7 +1,9 @@
 import { MdDeleteForever } from "react-icons/md";
+import PropTypes from 'prop-types';
 
-const SelectedPlayer = ({ player,handleDelete}) => {
-    const { playerId, name, image, role,biddingPrice } = player
+
+const SelectedPlayer = ({ player, handleDelete }) => {
+    const { playerId, name, image, role, biddingPrice } = player
 
     return (
 
@@ -14,9 +16,14 @@ const SelectedPlayer = ({ player,handleDelete}) => {
                     <p> <small>${biddingPrice}</small></p>
                 </div>
             </div>
-            <button onClick={()=>handleDelete(playerId)} className="text-red-600"> <MdDeleteForever></MdDeleteForever> </button>
+            <button onClick={() => handleDelete(playerId)} className="text-red-600"> <MdDeleteForever></MdDeleteForever> </button>
         </div>
     );
 };
 
 export default SelectedPlayer;
+
+SelectedPlayer.propTypes = {
+    player:PropTypes.array.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+}

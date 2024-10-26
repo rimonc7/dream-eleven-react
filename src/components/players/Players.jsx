@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
+import PropTypes from 'prop-types';
+
 
 const Players = ({ handleChoose, handleSelected}) => {
     const [players, SetPlayers] = useState([])
@@ -26,3 +28,8 @@ const Players = ({ handleChoose, handleSelected}) => {
 };
 
 export default Players;
+
+Players.propTypes = {
+    handleChoose: PropTypes.func.isRequired,
+    handleSelected: PropTypes.func.isRequired
+}

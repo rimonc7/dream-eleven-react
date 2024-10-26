@@ -1,5 +1,7 @@
 import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
+import PropTypes from 'prop-types';
+
 
 
 const Player = ({ player, handleChoose, handleSelected }) => {
@@ -47,3 +49,9 @@ const Player = ({ player, handleChoose, handleSelected }) => {
 };
 
 export default Player;
+
+Player.propTypes = {
+    player: PropTypes.object.isRequired,
+    handleChoose: PropTypes.func.isRequired,
+    handleSelected: PropTypes.func.isRequired
+}
