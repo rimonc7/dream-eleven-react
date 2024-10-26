@@ -39,6 +39,7 @@ function App() {
     } else {
       const newSelectedPlayers = [...selectedPlayers, player];
       setSelectedPlayers(newSelectedPlayers);
+      toast.success("Player Selected!");
     }
   };
 
