@@ -17,3 +17,7 @@ Build your ultimate Dream 11 cricket team with this easy-to-use React app! Selec
 1. **Budget Tracking**: Start with a budget and see it update as you add players.
 2. **Player Limit**: Pick up to 6 players; you’ll get alerts if you try to go over.
 3. **Instant Feedback**: Notifications keep you updated about your selections and budget.
+
+## Live Link
+
+ugly-manager.surge.sh
