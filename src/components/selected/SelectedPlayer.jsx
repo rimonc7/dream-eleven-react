@@ -3,8 +3,6 @@ import { MdDeleteForever } from "react-icons/md";
 const SelectedPlayer = ({ player,handleDelete}) => {
     const { playerId, name, image, role,biddingPrice } = player
 
-
-
     return (
 
         <div className="flex mx-4 lg:mx-36 justify-between border-2 rounded-xl px-6 py-2 my-4">

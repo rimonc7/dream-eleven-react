@@ -56,6 +56,12 @@ function App() {
   }
 
 
+  // const [addMore, setAddMore] = useState([])
+
+  const handleAddMore = value => {
+    setIsActive(value)
+  }
+
   return (
     <>
       <Header coin={coin}></Header>
@@ -65,7 +71,7 @@ function App() {
         <Players handleChoose={handleChoose} handleSelected={handleSelected}></Players>
       </div>
       <div className={isActive == true ? "hidden" : "block"}>
-        <Selected selectedPlayers={selectedPlayers} handleDelete={handleDelete}></Selected>
+        <Selected selectedPlayers={selectedPlayers} handleDelete={handleDelete} handleAddMore={handleAddMore}></Selected>
       </div>
       <ToastContainer position="top-center" autoClose={2000} theme="colored" />
       <Footer></Footer>

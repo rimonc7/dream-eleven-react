@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
 
-const Players = ({ handleChoose, handleSelected }) => {
+const Players = ({ handleChoose, handleSelected}) => {
     const [players, SetPlayers] = useState([])
 
     useEffect(() => {
