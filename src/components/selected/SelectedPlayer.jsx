@@ -1,7 +1,7 @@
 import { MdDeleteForever } from "react-icons/md";
 
 const SelectedPlayer = ({ player,handleDelete}) => {
-    const { name, image, role } = player
+    const { playerId, name, image, role,biddingPrice } = player
 
 
 
@@ -13,9 +13,10 @@ const SelectedPlayer = ({ player,handleDelete}) => {
                 <div>
                     <h2 className="font-bold">{name}</h2>
                     <p> <small>{role}</small></p>
+                    <p> <small>${biddingPrice}</small></p>
                 </div>
             </div>
-            <button onClick={handleDelete} className="text-red-600"> <MdDeleteForever></MdDeleteForever> </button>
+            <button onClick={()=>handleDelete(playerId)} className="text-red-600"> <MdDeleteForever></MdDeleteForever> </button>
         </div>
     );
 };

@@ -22,24 +22,29 @@ function App() {
     if (coin >= biddingPrice) {
       const remainingCoin = coin - biddingPrice;
       setCoin(remainingCoin);
-      toast.success("Player Added")
-    }
-    else {
-      toast.error("Insufficient Balance!")
     }
   }
 
   const [selectedPlayers, setSelectedPlayers] = useState([])
 
-  const handleSelected = player => {
-    if (coin >= player.biddingPrice) {
-      const newSelectedPlayer = [...selectedPlayers, player]
-      setSelectedPlayers(newSelectedPlayer);
+  const handleSelected = (player) => {
+    const selectedPlayerId = selectedPlayers.find(selectedPlayer => selectedPlayer.playerId === player.playerId);
+
+    if (selectedPlayers.length >= 6) {
+        toast.error("Can't Select More Than 6 Players");
+    } else if (selectedPlayerId) {
+        toast.error("Player is already selected!");
+    } else if (coin < player.biddingPrice) {
+        toast.error("Insufficient Balance!");
+    } else {
+        const newSelectedPlayers = [...selectedPlayers, player];
+        setSelectedPlayers(newSelectedPlayers);
     }
-  }
+};
+
 
   const handleDelete = id => {
-    const remainingPlayer = selectedPlayers.filter(player=> player.playerId !==id)
+    const remainingPlayer = selectedPlayers.filter(player => player.playerId !== id)
     setSelectedPlayers(remainingPlayer);
   }
 
